@@ -11,7 +11,7 @@ Limitations and assumptions include a reliance on the availability of consistent
 3. **NewsAPI or Open News Archives**: Supplemental publicly available news feeds and historical repositories used to provide the specific article text and headlines that the AI processes to generate its simple-language explanations.
 
 # Tech Stack
-*   **GenAI / LLM Integration**: OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, or Google Gemini 1.5 Pro to perform the synthesis of news data and numerical trends into simplified English.
+*   **GenAI / LLM Integration**: OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, or Google Gemini 2.5 Pro to perform the synthesis of news data and numerical trends into simplified English.
 *   **Data Processing**: Python with the Pandas and NumPy libraries for cleaning, filtering, and aligning numerical datasets with temporal news data.
 *   **Backend**: Python (FastAPI or Flask) to manage the logic between the data retrieval systems and the AI interface.
 *   **Frontend / UI**: Streamlit for rapid dashboard development or React for a custom, modern user interface that features interactive trend graphs and concise text panels.
