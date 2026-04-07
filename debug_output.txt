@@ -1,0 +1,21 @@
+Testing retrieval for query: 'Inflation'
+
+--- Testing: Single Field (Year) ---
+Filter: {'year': 2025}
+Success! Found 1 docs.
+Metadata: {'AvgTone': -0.69084628670121, 'SOURCEURL': 'https://www.ktvu.com/news/beef-prices-could-hit-10-pound-soon-omaha-steaks-ceo-warns', 'country_code': 'AR', 'ActionGeo_CountryCode': 'AR', 'ActionGeo_FullName': 'Argentina', 'Day': 20251116, 'Actor1Name': 'COMPANIES', 'Year': 2025, 'GoldsteinScale': -2.0, 'EventCode': 90, 'GlobalEventID': 1274394327, 'year': 2025}
+
+--- Testing: Single Field (Country) ---
+Filter: {'country_code': 'US'}
+Success! Found 1 docs.
+Metadata: {'AvgTone': -0.69084628670121, 'year': 2025, 'SOURCEURL': 'https://www.ktvu.com/news/beef-prices-could-hit-10-pound-soon-omaha-steaks-ceo-warns', 'Day': 20251116, 'country_code': 'US', 'Actor1Name': 'COMPANIES', 'GoldsteinScale': -2.0, 'GlobalEventID': 1274394326, 'ActionGeo_FullName': 'White House, District of Columbia, United States', 'ActionGeo_CountryCode': 'US', 'Year': 2025, 'EventCode': 90}
+
+--- Testing: Implicit AND ---
+Filter: {'year': 2025, 'country_code': 'US'}
+FAILED: Expected where to have exactly one operator, got {'year': 2025, 'country_code': 'US'} in query.
+
+--- Testing: Explicit AND ---
+Filter: {'$and': [{'year': 2025}, {'country_code': 'US'}]}
+Success! Found 1 docs.
+Metadata: {'AvgTone': -0.69084628670121, 'ActionGeo_CountryCode': 'US', 'Actor1Name': 'COMPANIES', 'Year': 2025, 'year': 2025, 'country_code': 'US', 'GoldsteinScale': -2.0, 'Day': 20251116, 'EventCode': 90, 'ActionGeo_FullName': 'White House, District of Columbia, United States', 'SOURCEURL': 'https://www.ktvu.com/news/beef-prices-could-hit-10-pound-soon-omaha-steaks-ceo-warns', 'GlobalEventID': 1274394326}
+
